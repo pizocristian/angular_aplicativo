@@ -1,0 +1,18 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="col-lg-6">
+        <h1>Agregar Producto</h1>
+        <form action="Controlador">
+            <br>
+            Referencia: <br>
+            <input class="form-control" type="text" [(ngModel)]="producto.referencia" name="referencia"><br>
+            Descripcion:<br>
+            <input class="form-control" type="text" [(ngModel)]="producto.descripcion" name="descripcion"><br>
+            Valor Unidad:<br>
+            <input class="form-control" type="number" [(ngModel)]="producto.valor_unitario" name="valor_unitario"><br>
+            <input class="btn btn-primary" type="submit" name="accion" (click)="guardarProducto()" value="AgregarProducto">
+            
+        </form>
+    </div>
+
+</div>

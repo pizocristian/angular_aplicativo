@@ -1,0 +1,15 @@
+  
+
+<app-menu></app-menu>
+  <div *ngFor=" let producto of productos" style="margin-top: 20px;">
+    <div class="card" style="width: 18rem; border: 1px solid; margin-left: 20px; margin-bottom: 20px; float: left; height: 400px " >
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><h2 class="card-title">{{producto.referencia}}</h2></li>
+          <li class="list-group-item"><img class="card-img-top" style="width: 100%" src="https://as01.epimg.net/meristation/imagenes/2019/10/11/betech/1570745248_291317_1570745364_noticia_normal_recorte1.jpg" alt="Card image cap">
+        </li>
+        <li class="list-group-item">{{producto.descripcion}}<p class="card-text"></p></li>
+        <li class="list-group-item">${{producto.valor_unitario}}<h4 class="card-text"></h4></li>
+          <li class="list-group-item"><p class="card-text"><a class="btn btn-primary" (click)="agregarCantidad(producto.id_producto)">Agregar al carrito</a></p></li>
+        </ul>
+      </div>
+</div>
